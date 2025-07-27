@@ -9,13 +9,24 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://use.typekit.net/mkg4bva.css">
     <link href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-  </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+25&family=Roboto+Mono:ital@0;1&display=swap" rel="stylesheet">
+  <script
+      type="text/JavaScript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
+    <script
+      type="text/JavaScript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js"
+    >
+  </script>
   <style>
       body {
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        font-size: medium;
+        font-family: "Roboto Mono";
+        font-weight: 400;
+        font-size: 14px;
       }
       h1 {
         font-family: "Jersey 25";
@@ -56,7 +67,7 @@
         padding-left: 20px;
       }
 
-      /* class with scrollabe effect */
+      /* class with scrollable effect */
       .my-scrolling {
         height: 200px;
         overflow: auto;
@@ -73,7 +84,7 @@
     <div class="w3-sidebar w3-bar-block w3-dark-brown w3-animate-left w3-text-yellow w3-collapse w3-top w3-center" 
       style="z-index:3;width:300px" id="mySidebar">
     <!-- shopping cart and search icons -->
-      <div class="w3-padding-large w3-hide-small w3-text-yellow w3-center">
+      <div class="w3-padding-large w3-hide-small w3-text-yellow w3-left">
           <i class="fa fa-shopping-basket"></i>
           <i class="fa fa-search"></i>
       </div>
@@ -141,7 +152,7 @@
           <p>
             <img
             src="IMAGES/Butterfly.gif"
-            class="w3-round w3-image my-float-left my-img-size-1"
+            class="w3-round w3-image my-float-left my-img-size-1 w3-padding-16"
             alt="Butterfly"
             /> 
           ACT provides resources, guides, and tools to help community members get involved in politics, 
@@ -159,7 +170,7 @@
       <p>
         <img
           src="/IMAGES/000000920020.jpg"
-          class="w3-round w3-image my-float-right my-img-size-2"
+          class="w3-round w3-image my-float-right my-img-size-2 w3-padding-16"
           alt="Me"
           width="350px"/>
           The work is compiled by Pratibha Pattabhiraman, an Oakland resident and supporter of 
@@ -170,30 +181,30 @@
       <!-- Guides -->
       <div class="w3-container" id="guides">
           <h6 class="w3-padding-32" style="text-align:left">GUIDES</h6>
-          <div class="w3-flex w3-padding-large" style="flex-direction:row;align-items:center">
+          <div class="w3-flex w3-padding-32" style="flex-direction:row;justify-content:center">
             <img 
               class="mySlides" 
               src="IMAGES/DISORG.png" 
-              style="width:1600px; height:600px; object-fit:cover" 
+              style="height:750px; object-fit:cover" 
             />
             <img
               class="mySlides"
               src="IMAGES/SOLIDARITY.png"
-              style="width:1600px; height:600px; object-fit:cover; display: none"
+              style="height:750px; object-fit:cover; display: none"
             />
             <img
               class="mySlides"
               src="/IMAGES/AUDRE.png"
-              style="width:1600px; height:600px; object-fit:cover; display: none"
+              style="height:750px; object-fit:cover; display: none"
             />
             <div class="w3-flex w3-center w3-hide-small w3-hide-medium"
-            style="flex-direction:column;align-items:stretch">
+            style="flex-direction:column;align-items:right">
             <!-- "currentDiv(1)" link to 1st slide -->
             <!-- demo class is used by a javascript function to turn off the opacity effect -->
             <img
               class="demo w3-opacity w3-hover-opacity-off"
               src="/IMAGES/DISORG.png"
-              style="width:200px; height: 200px; object-fit:cover; cursor: pointer; padding: 20px"
+              style="width:250px; height: 250px; object-fit:cover; cursor: pointer; padding: 20px"
               onclick="currentDiv(1)"
             />
             <!-- "currentDiv(2)" link to 2nd slide -->
@@ -201,7 +212,7 @@
             <img
               class="demo w3-opacity w3-hover-opacity-off"
               src="/IMAGES/SOLIDARITY.png"
-              style="width:200px; height: 200px; object-fit:cover; cursor: pointer; padding: 20px"
+              style="width:250px; height: 250px; object-fit:cover; cursor: pointer; padding: 20px"
               onclick="currentDiv(2)"
             />
             <!-- "currentDiv(3)" link to 3rd slide -->
@@ -209,7 +220,7 @@
             <img
               class="demo w3-opacity w3-hover-opacity-off"
               src="/IMAGES/AUDRE.png"
-              style="width:200px; height: 200px; object-fit:cover; cursor: pointer; padding: 20px"
+              style="width:250px; height: 250px; object-fit:cover; cursor: pointer; padding: 20px"
               onclick="currentDiv(3)"
             />
           </div>
@@ -287,6 +298,160 @@
       <!-- Get Involved -->
       <div class="w3-container w3-padding-64" id="getinvolved">
         <h6>Get Involved</h6>
+        <table id="myTable" class="w3-table-all w3-text-brown">
+            <thead>
+              <tr class="w3-dark-brown w3-text-yellow bdr-mono">
+                <th>ORG</th>
+                <th>FOCUS</th>
+                <th>LOCATION</th>
+                <th>SITE</th>
+              </tr>
+            </thead>
+            <tr class="w3-hover-pink">
+              <td>We Fight Back</td>
+              <td>Billionaire Agenda</td>
+              <td>Transnational</td>
+              <td><a href="https://www.wefightback2025.org">Website</a></td>
+            </tr>
+            <tr class="w3-hover-pink">
+              <td>Palestinian Youth Movement</td>
+              <td>Palestine</td>
+              <td>Transnational</td>
+              <td><a href="https://www.palestinianyouthmovement.com/about">Website</a></td>
+            </tr>
+            <tr class="w3-hover-pink">
+              <td>Party for Socialism and Liberation</td>
+              <td>Capitalism</td>
+              <td>Transnational</td>
+              <td><a href="https://www.pslweb.org">Website</a></td>
+            </tr>
+            <tr class="w3-hover-pink">
+              <td>The People's Forum</td>
+              <td>Capitalism</td>
+              <td>New York</td>
+              <td><a href="https://www.peoplesforum.org">Website</a></td>
+            </tr>
+          </table>
+      </div>
+      <div class="w3-container w3-padding-64" id="art">
+        <h6>Art</h6>
+        <div class="w3-row-padding" style="margin: 15px 0px">
+            <!-- first thumbnail image created below -->
+            <div class="w3-col s4">
+              <img
+                src="/IMAGES/Fiery.jpg"
+                style="width: 100%; cursor: zoom-in"
+                onclick="document.getElementById('modal01').style.display='block'"
+                class="w3-hover-shadow"
+              />
+            </div>
+            <!-- second thumbnail image created below
+               we set 'modal02' in getElementById('modal02') -->
+            <div class="w3-col s4">
+              <img
+                src="/IMAGES/Flag.jpg"
+                style="width: 100%; cursor: zoom-in"
+                onclick="document.getElementById('modal02').style.display='block'"
+                class="w3-hover-shadow"
+              />
+            </div>
+            <div class="w3-col s4">
+              <img
+                src="/IMAGES/Free Gaza.jpg"
+                style="width: 100%; cursor: zoom-in"
+                onclick="document.getElementById('modal02').style.display='block'"
+                class="w3-hover-shadow"
+              />
+            </div>
+          </div>
+          <div class="w3-row-padding" style="margin: 15px 0px">
+            <div class="w3-col s4">
+              <img
+                src="/IMAGES/Dove.jpg"
+                style="width: 100%; cursor: zoom-in"
+                onclick="document.getElementById('modal01').style.display='block'"
+                class="w3-hover-shadow"
+              />
+            </div>
+            <!-- second thumbnail image created below
+               we set 'modal02' in getElementById('modal02') -->
+            <div class="w3-col s4">
+              <img
+                src="/IMAGES/Resistance.jpg"
+                style="width: 100%; cursor: zoom-in"
+                onclick="document.getElementById('modal02').style.display='block'"
+                class="w3-hover-shadow"
+              />
+            </div>
+            <div class="w3-col s4">
+              <img
+                src="/IMAGES/Free Gaza.jpg"
+                style="width: 100%; cursor: zoom-in"
+                onclick="document.getElementById('modal02').style.display='block'"
+                class="w3-hover-shadow"
+              />
+            </div>
+          </div>
+          <!-- add the first modal, set id="modal01"-->
+          <!-- each lightbox content (modal) should have a unique modal id -->
+          <div
+            id="modal01"
+            class="w3-modal"
+            onclick="this.style.display='none'"
+          >
+            <!-- add close button-->
+            <span
+              class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright"
+              style="cursor: pointer"
+              >&times;</span
+            >
+            <!-- add modal background image -->
+            <div class="w3-modal-content w3-animate-zoom">
+              <h4 class="w3-center">Fiery</h4>
+              <img src="/IMAGES/Fiery.jpg" style="width: 100%" />
+            </div>
+          </div>
+
+          <!-- add the second modal, set id="modal02"-->
+          <!-- each lightbox content (modal) should have a unique modal id -->
+          <div
+            id="modal02"
+            class="w3-modal"
+            onclick="this.style.display='none'"
+          >
+            <!-- add close button-->
+            <span
+              class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright"
+              style="cursor: pointer"
+              >&times;</span
+            >
+            <!-- add modal background image -->
+            <div class="w3-modal-content w3-animate-zoom">
+              <h4 class="w3-center">Flag</h4>
+              <img src="/images/Flag.jpg" style="width: 100%" />
+            </div>
+          </div>
+
+          <!-- follow the samples above to continue adding modal for each thumbnail image -->
+          <!-- each lightbox content (modal) should have a unique modal id -->
+          <div
+            id="modal03"
+            class="w3-modal"
+            onclick="this.style.display='none'"
+          >
+          <span
+              class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright"
+              style="cursor: pointer"
+              >&times;</span
+            >
+            <!-- add modal background image -->
+            <div class="w3-modal-content w3-animate-zoom">
+              <h4 class="w3-center">Free Gaza</h4>
+              <img src="/images/Free Gaza.jpg" style="width: 100%" />
+            </div>
+            <!-- add code to add modal for each thumbnail image -->
+          </div>
+        </div>
       </div>
       <!-- End page content -->
     </div>
@@ -298,27 +463,27 @@
       >
       <div class="w3-xlarge w3-section">
         <a
-          class="fa fa-twitter w3-hover-opacity w3-text-brown"
+          class="fa fa-twitter w3-hover-opacity w3-text-white"
           href="https://twitter.com/"
           target="_blank"
         ></a>
         <a
-          class="fa fa-instagram w3-hover-opacity w3-text-brown"
+          class="fa fa-instagram w3-hover-opacity w3-text-white"
           href="https://www.instagram.com/"
           target="_blank"
         ></a>
         <a
-          class="fa fa-linkedin w3-hover-opacity w3-text-brown"
+          class="fa fa-linkedin w3-hover-opacity w3-text-white"
           href="https://www.linkedin.com/"
           target="_blank"
         ></a>
         <a
-          class="fa fa-pinterest-p w3-hover-opacity w3-text-brown"
+          class="fa fa-pinterest-p w3-hover-opacity w3-text-white"
           href="https://www.pinterest.com/"
           target="_blank"
         ></a>
         <a
-          class="fa fa-facebook-official w3-hover-opacity w3-text-brown my-text-decoration"
+          class="fa fa-facebook-official w3-hover-opacity w3-text-white my-text-decoration"
           href="https://www.facebook.com/"
           target="_blank"
         ></a>
@@ -327,18 +492,18 @@
         <a
           href="#home"
           target="_blank"
-          class="w3-hover-opacity w3-text-brown"
+          class="w3-hover-opacity w3-text-white"
           style="padding-right: 20px"
           >Privacy Policy</a
         >
         <a
           href="#home"
           target="_blank"
-          class="w3-hover-opacity w3-text-brown"
+          class="w3-hover-opacity w3-text-white"
           style="padding-right: 20px"
           >Terms of User</a
         >
-        <a href="#home" target="_blank" class="w3-hover-opacity w3-text-brown"
+        <a href="#home" target="_blank" class="w3-hover-opacity w3-text-white"
           >Accessibility</a
         >
       </div>
@@ -346,14 +511,14 @@
         <a
           href="#home"
           target="_blank"
-          class="w3-hover-opacity w3-text-brown"
+          class="w3-hover-opacity w3-text-white"
           style="padding-right: 20px"
           >1-800-123-4567</a
         >
         <a
           href="#home"
           target="_blank"
-          class="w3-hover-opacity w3-text-brown"
+          class="w3-hover-opacity w3-text-white"
           style="padding-right: 20px"
           >TTY: 1-800-987-6543</a
         >
@@ -361,7 +526,7 @@
       <a
         href="#"
         target="_blank"
-        class="fa fa-copyright w3-hover-opacity w3-text-brown"
+        class="w3-hover-opacity w3-text-white fa fa-copyright "
         >All Rights Reserved.</a
       >
     </footer>
@@ -428,6 +593,18 @@
         dots[slideIndex - 1].className += " w3-opacity-off";
       }
       // carousel slideshow end
+
+       // sortable table begin
+      $(document).ready(function () {
+        $("table#myTable").tablesorter({
+          sortList: [
+            [2, 1],
+          ] /* 1st number - column to sort, 2nd number - asending (2) or descending order (1) */,
+          CssAsc: "tablesorter-headerAsc",
+          CssDesc: "tablesorter-headerDesc",
+        });
+      });
+      // sortable table end
     </script>
   </body>
 </html>
