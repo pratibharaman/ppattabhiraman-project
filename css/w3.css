@@ -8,6 +8,16 @@ html {
   box-sizing: inherit;
 }
 /* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
+@media only screen and (min-width: 500px) {
+  .hide-on-desktop {
+    display: none;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .hide-on-mobile {
+    display: block;
+  }
+}
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;

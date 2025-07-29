@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ACT Website</title>
+    <link rel="stylesheet" href="./css/w3.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://use.typekit.net/mkg4bva.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+25&family=Roboto+Mono:ital@0;1&display=swap" rel="stylesheet">
+    <script
+      type="text/JavaScript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    <script
+      type="text/JavaScript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js">
+    </script>
+    <style>
+      body {
+        font-family: "Roboto Mono";
+        font-weight: 400;
+        font-size: 14px;
+      }
+      h1 {
+        font-family: "Jersey 25";
+        letter-spacing: 5px;
+        font-size: 30px;
+      }
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "bdr-mono";
+        color: rgb(255, 40, 147);
+        font-size: 30px;
+      }
+      a {
+        text-decoration: none;
+        color: #e0ff44;
+        cursor: pointer;
+      }
+      .my-img-size-1 {
+        max-width: 300px;
+      }
+
+      .my-img-size-2 {
+        max-width: 500px;
+      }
+
+      /* place the element to the left */
+      .my-float-left {
+        float: left;
+        padding-right: 20px;
+      }
+
+      /* place the element to the right */
+      .my-float-right {
+        float: right;
+        padding-left: 20px;
+      }
+
+      /* class with scrollable effect */
+      .my-scrolling {
+        height: 200px;
+        overflow: auto;
+      }
+
+      /* left-align the carousel slide */
+      .mySlides {
+        max-width: 65%;
+      }
+    </style>
+  </head>
+  <body class="w3-dark-brown w3-content" style="max-width:100%">
+    <!-- Sidebar/menu-->
+    <div class="w3-sidebar w3-bar-block w3-dark-brown w3-animate-left w3-text-yellow w3-collapse w3-top w3-center" 
+      style="z-index:3;width:300px" id="mySidebar">
+    <!-- shopping cart and search icons -->
+      <div class="w3-padding-32 w3-hide-small w3-text-yellow w3-center">
+          <i class="fa fa-shopping-basket w3-xlarge"></i>
+          <i class="fa fa-search w3-xlarge"></i>
+        </div>
+    <!-- Home -->
+      <h1><a href="./index.html" 
+        class="w3-bar-item w3-button w3-text-yellow" 
+        style="font-size:100px;text-align:center;text-shadow:5px 5px 0 #d95c5c">ART</a>
+      </h1>
+    <!-- left-sided navbar links, hide on small screens -->
+      <h1 div class="w3-hide-small">
+        <a href="./about.html" class="w3-bar-item w3-button">ABOUT</a> 
+        <a href="./read.html" class="w3-bar-item w3-button">READ</a> 
+        <a href="./explore.html" class="w3-bar-item w3-button">EXPLORE</a>
+        <a href="./images.html" class="w3-bar-item w3-button">IMAGES</a>
+        <a href="./videos.html" class="w3-bar-item w3-button">WATCH</a>
+      </h1>
+    </div>
+    <!-- Top menu on small screens -->
+    <div class="w3-container w3-dark-brown w3-top w3-hide-large">
+      <h1 class="w3-bar-item w3-button w3-text-yellow w3-hover-brown" 
+        style="font-size:60px;text-align:center;text-shadow:5px 5px 0 #d95c5c">ART</h1>
+      <a href="javascript:void(0)" 
+        class="w3-bar-item w3-button w3-text-yellow w3-hide-large w3-hide-medium" 
+        onclick="w3_open()">
+        <i class="fa fa-bars w3-text-yellow w3-xlarge"></i>
+      </a>
+    </div>
+  <!-- navbar mobile version -->
+  <nav
+      class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-hide-medium w3-hide-large w3-text-yellow w3-large"
+      style="display: none"
+      id="mySidebar">
+    <a
+      href="javascript:void(0)"
+      onclick="w3_close()"
+      class="w3-bar-item w3-button w3-large w3-padding-16">
+      Close &times;</a>
+    <a href="/about.html" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+    <a href="/read.html" onclick="w3_close()" class="w3-bar-item w3-button">READ</a>
+    <a href="/explore.html" onclick="w3_close()" class="w3-bar-item w3-button">EXPLORE</a>
+    <a href="/images.html" onclick="w3_close()" class="w3-bar-item w3-button">IMAGES</a>
+    <a href="#videos" onclick="w3_close()" class="w3-bar-item w3-button">WATCH</a>
+    </nav>
+  <div class="w3-main" style="margin-left:300px;margin-right:50px">
+  <!-- ART content -->
+      <div class="w3-container w3-padding-64" id="images">
+        <h6>IMAGES</h6>
+        <div class="w3-row-padding" style="margin: 15px 0px">
+            <div class="w3-col s4">
+              <img
+                src="/new/create 1.png"
+                style="width: 100%; cursor: zoom-in"
+                onclick="document.getElementById('modal01').style.display='block'"
+                class="w3-hover-shadow"
+              />
+            </div>
+            <div class="w3-col s4">
+              <img
+                src="/new/create 2.png"
+                style="width: 100%; cursor: zoom-in"
+                onclick="document.getElementById('modal02').style.display='block'"
+                class="w3-hover-shadow"
+              />
+            </div>
+            <div class="w3-col s4">
+              <img
+                src="/new/create 3.png"
+                style="width: 100%; cursor: zoom-in"
+                onclick="document.getElementById('modal03').style.display='block'"
+                class="w3-hover-shadow"
+              />
+            </div>
+          </div>
+          <div class="w3-row-padding" style="margin: 15px 0px">
+            <div class="w3-col s4">
+              <img
+                src="/new/create 4.png"
+                style="width: 100%; cursor: zoom-in"
+                onclick="document.getElementById('modal04').style.display='block'"
+                class="w3-hover-shadow"
+              />
+            </div>
+            <div class="w3-col s4">
+              <img
+                src="/new/create 5.png"
+                style="width: 100%; cursor: zoom-in"
+                onclick="document.getElementById('modal05').style.display='block'"
+                class="w3-hover-shadow"
+              />
+            </div>
+            <div class="w3-col s4">
+              <img
+                src="/new/create 6.png"
+                style="width: 100%; cursor: zoom-in"
+                onclick="document.getElementById('modal06').style.display='block'"
+                class="w3-hover-shadow"
+              />
+            </div>
+          </div>
+          <div
+            id="modal01"
+            class="w3-modal"
+            onclick="this.style.display='none'"
+          >
+            <span
+              class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright"
+              style="cursor: pointer"
+              >&times;</span
+            >
+            <div class="w3-modal-content w3-animate-zoom">
+              <h4 class="w3-center">Fiery</h4>
+              <img src="/new/create 1.png" style="width: 100%" />
+            </div>
+          </div>
+          <div
+            id="modal02"
+            class="w3-modal"
+            onclick="this.style.display='none'"
+          >
+            <span
+              class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright"
+              style="cursor: pointer"
+              >&times;</span
+            >
+              <div class="w3-modal-content w3-animate-zoom">
+              <h4 class="w3-center">Flag</h4>
+              <img src="/new/create 2.png" style="width: 100%" />
+            </div>
+          </div>
+          <div
+            id="modal03"
+            class="w3-modal"
+            onclick="this.style.display='none'"
+          >
+          <span
+              class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright"
+              style="cursor: pointer"
+              >&times;</span
+            >
+            <div class="w3-modal-content w3-animate-zoom">
+              <h4 class="w3-center">Free Gaza</h4>
+              <img src="/new/create 3.png" style="width: 100%" />
+            </div>
+          </div>
+          <div
+            id="modal04"
+            class="w3-modal"
+            onclick="this.style.display='none'"
+          >
+          <span
+              class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright"
+              style="cursor: pointer"
+              >&times;</span
+            >
+            <div class="w3-modal-content w3-animate-zoom">
+              <h4 class="w3-center">Free Gaza</h4>
+              <img src="/new/create 4.png" style="width: 100%" />
+            </div>
+          </div>
+          <div
+            id="modal05"
+            class="w3-modal"
+            onclick="this.style.display='none'"
+          >
+          <span
+              class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright"
+              style="cursor: pointer"
+              >&times;</span
+            >
+            <div class="w3-modal-content w3-animate-zoom">
+              <h4 class="w3-center">Free Gaza</h4>
+              <img src="/new/create 5.png" style="width: 100%" />
+            </div>
+          </div>
+          <div
+            id="modal06"
+            class="w3-modal"
+            onclick="this.style.display='none'"
+          >
+          <span
+              class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright"
+              style="cursor: pointer"
+              >&times;</span
+            >
+            <div class="w3-modal-content w3-animate-zoom">
+              <h4 class="w3-center">Free Gaza</h4>
+              <img src="/new/create 6.png" style="width: 100%" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End page content -->
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-content w3-center w3-pink w3-padding-32" style="max-width:100%">
+      <a href="#home" class="w3-button w3-pink"
+        ><i class="fa fa-arrow-up w3-margin-right"></i>TO THE TOP</a
+      >
+      <div class="w3-large w3-section">
+        <a
+          class="fa fa-twitter w3-hover-opacity w3-text-white"
+          href="https://twitter.com/"
+          target="_blank"
+        ></a>
+        <a
+          class="fa fa-instagram w3-hover-opacity w3-text-white"
+          href="https://www.instagram.com/"
+          target="_blank"
+        ></a>
+        <a
+          class="fa fa-linkedin w3-hover-opacity w3-text-white"
+          href="https://www.linkedin.com/"
+          target="_blank"
+        ></a>
+        <a
+          class="fa fa-pinterest-p w3-hover-opacity w3-text-white"
+          href="https://www.pinterest.com/"
+          target="_blank"
+        ></a>
+        <a
+          class="fa fa-facebook-official w3-hover-opacity w3-text-white my-text-decoration"
+          href="https://www.facebook.com/"
+          target="_blank"
+        ></a>
+      </div>
+      <div>
+        <a
+          href="#home"
+          target="_blank"
+          class="w3-hover-opacity w3-text-white"
+          style="padding-right: 20px"
+          >Privacy Policy</a
+        >
+        <a
+          href="#home"
+          target="_blank"
+          class="w3-hover-opacity w3-text-white"
+          style="padding-right: 20px"
+          >Terms of User</a
+        >
+        <a href="#home" target="_blank" class="w3-hover-opacity w3-text-white"
+          >Accessibility</a
+        >
+      </div>
+      <div>
+        <a
+          href="#home"
+          target="_blank"
+          class="w3-hover-opacity w3-text-white"
+          style="padding-right: 20px"
+          >1-800-123-4567</a
+        >
+        <a
+          href="#home"
+          target="_blank"
+          class="w3-hover-opacity w3-text-white"
+          style="padding-right: 20px"
+          >TTY: 1-800-987-6543</a
+        >
+        <a
+        href="#"
+        target="_blank"
+        class="w3-hover-opacity w3-text-white fa fa-copyright Roboto"
+        > All Rights Reserved.</a
+        >
+      </div>
+    </footer>
+  </body>
+</html>
