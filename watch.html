@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ACT Website</title>
+    <link rel="stylesheet" href="./css/w3.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://use.typekit.net/mkg4bva.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+25&family=Roboto+Mono:ital@0;1&display=swap" rel="stylesheet">
+    <script
+      type="text/JavaScript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    <script
+      type="text/JavaScript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js">
+    </script>
+    <style>
+      body {
+        font-family: "Roboto Mono";
+        font-weight: 400;
+        font-size: 14px;
+      }
+      h1 {
+        font-family: "Jersey 25";
+        letter-spacing: 5px;
+        font-size: 30px;
+      }
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "bdr-mono";
+        color: rgb(255, 40, 147);
+        font-size: 30px;
+      }
+      a {
+        text-decoration: none;
+        color: #e0ff44;
+        cursor: pointer;
+      }
+      .my-img-size-1 {
+        max-width: 300px;
+      }
+
+      .my-img-size-2 {
+        max-width: 500px;
+      }
+
+      /* place the element to the left */
+      .my-float-left {
+        float: left;
+        padding-right: 20px;
+      }
+
+      /* place the element to the right */
+      .my-float-right {
+        float: right;
+        padding-left: 20px;
+      }
+
+      /* class with scrollable effect */
+      .my-scrolling {
+        height: 200px;
+        overflow: auto;
+      }
+
+      /* left-align the carousel slide */
+      .mySlides {
+        max-width: 65%;
+      }
+      /* accordian */
+      #accordionBtn1:hover,
+      #accordionBtn2:hover {
+        background-color: rgb(255, 252, 52) !important;
+      }
+    </style>
+  </head>
+  <body class="w3-dark-brown w3-content" style="max-width:100%">
+    <!-- Sidebar/menu-->
+    <div class="w3-sidebar w3-bar-block w3-dark-brown w3-animate-left w3-text-yellow w3-collapse w3-top w3-center" 
+      style="z-index:3;width:300px" id="mySidebar">
+    <!-- shopping cart and search icons -->
+      <div class="w3-padding-32 w3-hide-small w3-text-yellow w3-center">
+          <i class="fa fa-shopping-basket w3-xlarge"></i>
+          <i class="fa fa-search w3-xlarge"></i>
+        </div>
+    <!-- Home -->
+     <h1><a href="./index.html" 
+        class="w3-bar-item w3-button w3-text-yellow" 
+        style="font-size:60px;text-align:center;text-shadow:5px 5px 0 #ff0b50">SPIRALING</a>
+      </h1>
+    <!-- left-sided navbar links, hide on small screens -->
+      <h1 div class="w3-hide-small">
+        <a href="/about.html" class="w3-bar-item w3-button">ABOUT</a> 
+        <a href="/read.html" class="w3-bar-item w3-button">READ</a> 
+        <a href="/explore.html" class="w3-bar-item w3-button">EXPLORE</a>
+        <a href="/images.html" class="w3-bar-item w3-button">IMAGES</a>
+        <a href="#videos" class="w3-bar-item w3-button">WATCH</a>
+      </h1>
+    </div>
+    <!-- Top menu on small screens -->
+    <div class="w3-container w3-dark-brown w3-top w3-hide-large">
+      <h1 class="w3-bar-item w3-button w3-text-yellow w3-hover-brown" 
+        style="font-size:30px;text-align:center;text-shadow:5px 5px 0 #ff0b50">SPIRALING</h1>
+      <a href="javascript:void(0)" 
+        class="w3-bar-item w3-button w3-text-yellow w3-hide-large w3-hide-medium" 
+        onclick="w3_open()">
+        <i class="fa fa-bars w3-text-yellow w3-xlarge"></i>
+      </a>
+    </div>
+  <!-- navbar mobile version -->
+  <nav
+      class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-hide-medium w3-hide-large w3-text-yellow w3-large"
+      style="display: none"
+      id="mySidebar">
+    <a
+      href="javascript:void(0)"
+      onclick="w3_close()"
+      class="w3-bar-item w3-button w3-large w3-padding-16">
+      Close &times;</a>
+    <a href="/about.html" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+    <a href="/read.html" onclick="w3_close()" class="w3-bar-item w3-button">READ</a>
+    <a href="/explore.html" onclick="w3_close()" class="w3-bar-item w3-button">EXPLORE</a>
+    <a href="/images.html" onclick="w3_close()" class="w3-bar-item w3-button">IMAGES</a>
+    <a href="#videos" onclick="w3_close()" class="w3-bar-item w3-button">WATCH</a>
+    </nav>
+  <div class="w3-main" style="margin-left:300px;margin-right:50px">
+  <!-- WATCH Section -->
+   <div class="w3-container w3-padding-64" id="images">
+        <div class="w3-row-padding" style="margin: 15px 0px">
+          <h6 style="margin-left:30px">WATCH</h6>
+          <!-- add youtube video begin -->
+          <!-- step 1: use w3-row and w3-col classes to allocated spaces for youtube videos -->
+          <!--    source: https://www.w3schools.com/w3css/w3css_responsive.asp -->
+          <!-- step 2: browser to https://www.youtube.com/ and search for videos -->
+          <!-- step 3: look for the youtube video embedded code and copy the code snippet -->
+          <!-- step 4: paste the code snippet in the space created with w3-row and w3-col classes -->
+
+          <div class="w3-row">
+            <!-- create 1st column -->
+            <div class="w3-col m4 w3-center">
+              <!-- paste the YouTube video link -->
+              <iframe
+                height="300"
+                src="https://www.youtube.com/embed/mQtwXTGasEU?si=ahc3h2j8mgZai-VQ"
+                title="Writer Rachel Cusk: 'Something in the writing process is shameless.'' | Louisiana Channel"
+                frameborder="0"
+                allow="autoplay;"
+              >
+              </iframe>
+            </div>
+            <!-- create 2nd column -->
+            <div class="w3-col m4 w3-center">
+              <!-- paste the YouTube video link -->
+              <iframe
+                height="300"
+                src="https://www.youtube.com/embed/Em66j9Xlsqg?si=1sOGGYCxRUSSGjH"
+                title="how to fall down a curiosity rabbit hole & reconnect to your creativity"
+"
+                frameborder="0"
+                allow="autoplay;"
+              >
+              </iframe>
+            </div>
+            <!-- create 3rd column -->
+            <div class="w3-col m4 w3-center">
+              <!-- paste the YouTube video link -->
+              <iframe
+                height="300"
+                src="https://www.youtube.com/embed/EPTQVXwCkbw?si=JdJSa-Id3NhLHCRJ"
+                title="David Lynch (1946-2025) on his lifelong devotion to artmaking"
+                frameborder="0"
+                allow="autoplay;"
+              >
+              </iframe>
+            </div>
+          <div class="w3-row">
+            <!-- create an area to hold both accordion button and content -->
+            <div class="w3-col l6 w3-left" style="padding-right: 3px">
+              <!-- add accordion button here -->
+              <!-- set button to myAccordion('accordion1') to link to its accordion content -->
+              <!-- set a unique id="accordionBtn1" for the button -->
+              <button
+                onclick="myAccordion('accordion1')"
+                class="w3-button w3-block w3-brown w3-center-align"
+                id="accordionBtn1"
+              >
+                <h4>ANNIE DILLARD <i class="fa fa-caret-down"></i></h4>
+              </button>
+              <!-- add accordion content here -->
+              <!-- set a unique id="accordion1" for the accordion content -->
+              <div
+                id="accordion1"
+                class="w3-hide w3-container"
+                style="height: 260px"
+              >
+                <p>
+                  “How we spend our days is, of course, how we spend our lives. 
+                  What we do with this hour, and that one, is what we are doing. 
+                  A schedule defends from chaos and whim. It is a net for catching days. 
+                  It is a scaffolding on which a worker can stand and labor with both hands 
+                  at sections of time. A schedule is a mock-up of reason and order—willed, 
+                  faked, and so brought into being; it is a peace and a haven set into the 
+                  wreck of time; it is a lifeboat on which you find yourself, decades later, 
+                  still living.”
+                  </br>
+                  <i>The Writing Life</i>
+                </p>
+              </div>
+            </div>
+            <!-- repeat the steps to create another accordion button and content here -->
+            <!-- each button id and accordion content id should be unique -->
+            <!-- set button to myAccordion('accordion2') to link to its accordion content -->
+            <!-- set a unique id="accordionBtn1" for the button -->
+            <div class="w3-col l6 w3-left" style="padding-left: 3px">
+              <button
+                onclick="myAccordion('accordion2')"
+                class="w3-button w3-block w3-brown w3-center-align"
+                id="accordionBtn2"
+              >
+                <h4>ANNIE LAMOTT<i class="fa fa-caret-down"></i></h4>
+              </button>
+              <!-- add accordion content here -->
+              <!-- set a unique id="accordion2" for the accordion content -->
+              <div
+                id="accordion2"
+                class="w3-hide w3-container"
+                style="height: 260px"
+              >
+                <p>
+                  “Writing and reading decrease our sense of isolation. 
+                  They deepen and widen and expand our sense of life: they feed the soul. 
+                  When writers make us shake our heads with the exactness of their prose 
+                  and their truths, and even make us laugh about ourselves or life, 
+                  our buoyancy is restored. We are given a shot at dancing with, 
+                  or at least clapping along with, the absurdity of life, 
+                  instead of being squashed by it over and over again. 
+                  It's like singing on a boat during a terrible storm at sea. 
+                  You can't stop the raging storm, but singing can change the 
+                  hearts and spirits of the people who are together on that ship.”
+                  </br>
+                  <i>Bird by Bird</i>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+        <script>
+          var myIndex = 0;
+      carousel();
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {
+          myIndex = 1;
+        }
+        x[myIndex - 1].style.display = "block";
+        setTimeout(carousel, 2000); // Change image every 2 seconds
+      }
+
+      // slideshow - carousel
+      // hook each carousel button
+      function currentDiv(n) {
+        showDivs((slideIndex = n));
+        myIndex = n;
+      }
+
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        if (n > x.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = x.length;
+        }
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+        }
+        x[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " w3-opacity-off";
+      }
+      function myAccordion(id) {
+        var x = document.getElementById(id);
+        // if the accordion text is hidden, show it and change the button color to orange
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+          x.previousElementSibling.className =
+            x.previousElementSibling.className.replace("w3-brown", "w3-orange");
+        } else {
+          // if the accordion text is displayed, hide it and change the button color to brown
+          x.className = x.className.replace(" w3-show", "");
+          x.previousElementSibling.className =
+            x.previousElementSibling.className.replace("w3-orange", "w3-brown");
+        }
+      }
+        </script>
+      </div>
+    </body>
+  </html>
+          

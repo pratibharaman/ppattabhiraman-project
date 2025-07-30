@@ -88,9 +88,9 @@
           <i class="fa fa-search w3-xlarge"></i>
         </div>
     <!-- Home -->
-      <h1 a href="/index.html" 
+     <h1><a href="./index.html" 
         class="w3-bar-item w3-button w3-text-yellow" 
-        style="font-size:100px;text-align:center;text-shadow:5px 5px 0 #d95c5c">ART</a>
+        style="font-size:50px;text-align:center;text-shadow:5px 5px 0 #ff0b50">SPIRALING</a>
       </h1>
     <!-- left-sided navbar links, hide on small screens -->
       <h1 div class="w3-hide-small">
@@ -98,13 +98,13 @@
         <a href="/read.html" class="w3-bar-item w3-button">READ</a> 
         <a href="/explore.html" class="w3-bar-item w3-button">EXPLORE</a>
         <a href="/images.html" class="w3-bar-item w3-button">IMAGES</a>
-        <a href="#videos" class="w3-bar-item w3-button">WATCH</a>
+        <a href="/watch.html" class="w3-bar-item w3-button">WATCH</a>
       </h1>
     </div>
     <!-- Top menu on small screens -->
     <div class="w3-container w3-dark-brown w3-top w3-hide-large">
       <h1 class="w3-bar-item w3-button w3-text-yellow w3-hover-brown" 
-        style="font-size:60px;text-align:center;text-shadow:5px 5px 0 #d95c5c">ART</h1>
+        style="font-size:30px;text-align:center;text-shadow:5px 5px 0 #ff0b50">SPIRALING</h1>
       <a href="javascript:void(0)" 
         class="w3-bar-item w3-button w3-text-yellow w3-hide-large w3-hide-medium" 
         onclick="w3_open()">
@@ -125,48 +125,42 @@
     <a href="/read.html" onclick="w3_close()" class="w3-bar-item w3-button">READ</a>
     <a href="/explore.html" onclick="w3_close()" class="w3-bar-item w3-button">EXPLORE</a>
     <a href="/images.html" onclick="w3_close()" class="w3-bar-item w3-button">IMAGES</a>
-    <a href="#videos" onclick="w3_close()" class="w3-bar-item w3-button">WATCH</a>
+    <a href="/watch.html" onclick="w3_close()" class="w3-bar-item w3-button">WATCH</a>
     </nav>
   <div class="w3-main" style="margin-left:300px;margin-right:50px">
   <!-- READ Section -->
-  <div class="w3-container w3-padding-64" id="read">
-       <h6>READ</h6>
-          <div class="w3-flex w3-padding-32" style="flex-direction:row;justify-content:center">
+  <div class="w3-padding-64" id="read">
+       <h6 class="w3-padding-large" style="margin-left:30px">READ</h6>
+          <div class="w3-flex" style="flex-direction:row;justify-content:left;margin-left:50px">
             <img 
               class="mySlides" 
               src="/new/selling.png" 
-              style="width:600px; height:600px; object-fit:cover" 
+              style="width:1000px; height:600px; object-fit:cover" 
             />
             <img
               class="mySlides"
               src="/new/website.png"
-              style="width:600px; height:600px; object-fit:cover; display: none"
+              style="width:1000px; height:600px; object-fit:cover; display: none"
             />
             <img
               class="mySlides"
               src="/new/what you need.png"
-              style="width:600px; height:600px; object-fit:cover; display: none"
+              style="width:1000px; height:600px; object-fit:cover; display: none"
             />
-            <div class="w3-flex w3-center w3-hide-small w3-hide-medium"
+            <div class="w3-flex w3-hide-small w3-hide-medium"
             style="flex-direction:column;align-items:right">
-            <!-- "currentDiv(1)" link to 1st slide -->
-            <!-- demo class is used by a javascript function to turn off the opacity effect -->
             <img
               class="demo w3-opacity w3-hover-opacity-off"
               src="/new/selling.png"
               style="width:200px; height: 200px; object-fit:cover; cursor: pointer; padding: 20px"
               onclick="currentDiv(1)"
             />
-            <!-- "currentDiv(2)" link to 2nd slide -->
-            <!-- demo class is used by a javascript function to turn off the opacity effect -->
             <img
               class="demo w3-opacity w3-hover-opacity-off"
               src="/new/website.png"
               style="width:200px; height: 200px; object-fit:cover; cursor: pointer; padding: 20px"
               onclick="currentDiv(2)"
             />
-            <!-- "currentDiv(3)" link to 3rd slide -->
-            <!-- demo class is used by a javascript function to turn off the opacity effect -->
             <img
               class="demo w3-opacity w3-hover-opacity-off"
               src="/new/what you need.png"
@@ -175,20 +169,13 @@
             />
           </div>
         </div>
-          <!-- scrollable area begin -->
-          <!-- Add 3 columns of scrollable areas - using w3-row and w3-col classes for partitions -->
-          <!-- step 1: add a <div> tag with w3-row class-->
+      </div>
           <div class="w3-row">
-            <!-- step 2: add a <div> tag with w3-col s4 classes-->
             <div class="w3-col m4 w3-dark-brown">
-              <!-- step 3: add a heading in a <div> tag and style it -->
               <div
                 class="w3-text-yellow w3-center">
                 <h1 style="font-size:20px">SELLING YOUR WORK</h1>
               </div>
-              <!-- step 4: add a <p> tag inside a <div> tag for scrollable area -->
-              <!-- step 5: create a class with scrollabe effect in the <style> tag (inside the <head> tag above) -->
-              <!-- step 6: add the class to the class property in the <div> tag -->
               <div class="my-scrolling" style="padding-left: 20px;padding-right: 10px">
                 <p>
                   It should be said in the first line of this guide
@@ -202,14 +189,10 @@
               </div>
             </div>
             <div class="w3-col m4 w3-dark-brown">
-              <!-- step 3: add a heading in a <div> tag and style it -->
               <div
                 class="w3-text-yellow w3-center">
                 <h1 style="font-size:20px">WEBSITE'S PURPOSE</h1>
               </div>
-              <!-- step 4: add a <p> tag inside a <div> tag for scrollable area -->
-              <!-- step 5: create a class with scrollabe effect in the <style> tag (inside the <head> tag above) -->
-              <!-- step 6: add the class to the class property in the <div> tag -->
               <div class="my-scrolling" style="padding-left: 20px;padding-right: 10px">
                 <p>
                   My favorite aspect of websites is their duality: 
@@ -227,14 +210,10 @@
               </div>
             </div>
             <div class="w3-col m4 w3-dark-brown">
-              <!-- step 3: add a heading in a <div> tag and style it -->
               <div
                 class="w3-text-yellow w3-center">
                 <h1 style="font-size:20px">ASK FOR WHAT YOU NEED</h1>
               </div>
-              <!-- step 4: add a <p> tag inside a <div> tag for scrollable area -->
-              <!-- step 5: create a class with scrollabe effect in the <style> tag (inside the <head> tag above) -->
-              <!-- step 6: add the class to the class property in the <div> tag -->
               <div class="my-scrolling" style="padding-left: 20px;padding-right: 10px">
                 <p>
                   Learning how to ask for emotional and financial support 
