@@ -76,58 +76,62 @@
       .mySlides {
         max-width: 65%;
       }
-    </style>
-  </head>
-  <body class="w3-dark-brown w3-content" style="max-width:100%">
+  </style>
+</head>
+<body class="w3-dark-brown w3-content" style="max-width:100%">
     <!-- Sidebar/menu-->
-    <div class="w3-sidebar w3-bar-block w3-dark-brown w3-animate-left w3-text-yellow w3-collapse w3-top w3-center" 
+  <div class="w3-sidebar w3-bar-block w3-dark-brown w3-animate-left w3-text-yellow w3-collapse w3-top w3-center" 
       style="z-index:3;width:300px" id="mySidebar">
     <!-- shopping cart and search icons -->
-      <div class="w3-padding-32 w3-hide-small w3-text-yellow w3-center">
-          <i class="fa fa-shopping-basket w3-xlarge"></i>
-          <i class="fa fa-search w3-xlarge"></i>
-      </div>
-    <!-- Home -->
-      <h1><a href="./index.html" 
-        class="w3-bar-item w3-button w3-text-yellow w3-hover-brown" 
-        style="font-size:50px;text-align:center;text-shadow:5px 5px 0 #ff0b50">SPIRALING</a>
-      </h1>
-    <!-- left-sided navbar links, hide on small screens -->
-      <h1><div class=".hide-on-desktop w3-hover-pink">
-        <a href="/about.html" class="w3-bar-item w3-button">ABOUT</a> 
-        <a href="/read.html" class="w3-bar-item w3-button">READ</a> 
-        <a href="/explore.html" class="w3-bar-item w3-button">EXPLORE</a>
-        <a href="/images.html" class="w3-bar-item w3-button">IMAGES</a>
-        <a href="/watch.html" class="w3-bar-item w3-button">WATCH</a>
-      </h1>
+    <div class="w3-padding-32 w3-hide-small w3-text-yellow w3-center">
+      <i class="fa fa-shopping-basket w3-xlarge"></i>
+      <i class="fa fa-search w3-xlarge"></i>
     </div>
+    <!-- Home -->
+    <h1>
+      <a href="./index.html" 
+        class="w3-bar-item w3-button w3-text-yellow w3-hover-white" 
+        style="font-size:50px;text-align:center;text-shadow:5px 5px 0 #ff0b50">SPIRALING
+      </a>
+    </h1>
+    <!-- left-sided navbar links, hide on small screens -->
+    <div class=".hide-on-desktop">
+      <a href="./about.html" class="w3-bar-item w3-button w3-hover-white"><h1>ABOUT</h1></a> 
+      <a href="./read.html" class="w3-bar-item w3-button w3-hover-white"><h1>READ</h1></a> 
+      <a href="./explore.html" class="w3-bar-item w3-button w3-hover-white"><h1>EXPLORE</h1></a>
+      <a href="./images.html" class="w3-bar-item w3-button w3-hover-white"><h1>IMAGES</h1></a>
+      <a href="./watch.html" class="w3-bar-item w3-button w3-hover-white"><h1>WATCH</h1></a>
+    </div>
+  </div>
     <!-- Top menu on small screens -->
-    <div class="w3-flex w3-dark-brown w3-top w3-hide-large">
-      <h1><a href="/index.html" class="w3-text-yellow w3-hover-brown" 
-        style="font-size:30px;text-align:center;margin-left:20px;text-shadow:5px 5px 0 #ff0b50">SPIRALING</h1>
+  <div class="w3-flex w3-dark-brown w3-top w3-hide-large">
+    <h1>
+      <a href="/index.html" class="w3-text-yellow w3-hover-white" 
+        style="font-size:30px;text-align:center;margin-left:20px;text-shadow:5px 5px 0 #ff0b50">SPIRALING
+      </a>
+    </h1>
       <a href="javascript:void(0)" 
-        class="w3-bar-item w3-button w3-text-yellow w3-hide-large w3-hover-pink"
+        class="w3-bar-item w3-button w3-text-yellow w3-hide-large w3-hover-white"
         style="align-content:center" 
         onclick="w3_open()">
         <i class="fa fa-bars w3-text-yellow w3-xlarge"></i>
       </a>
-    </a>
-    </div>
+  </div>
   <!-- navbar mobile version -->
   <nav
-      class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-hide-large w3-text-yellow w3-large .hide-on-mobile"
+      class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-hide-large w3-text-yellow .hide-on-mobile"
       style="display:none"
       id="mySidebar">
-     <a href="javascript:void(0)"
-      class="w3-bar-item w3-button w3-large w3-padding-16 w3-text-yellow"
-      onclick="w3_close()">
-      Close &times;</a>
+      <a href="javascript:void(0)"
+        onclick="w3_close()"
+        class="w3-bar-item w3-button w3-large w3-padding-16 w3-text-yellow">Close X
+      </a>
   <!-- step 7: change mobile menu option text, font size and id reference --> 
-    <a href="./about.html" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-    <a href="./read.html" onclick="w3_close()" class="w3-bar-item w3-button">READ</a>
-    <a href="./explore.html" onclick="w3_close()" class="w3-bar-item w3-button">EXPLORE</a>
-    <a href="./images.html" onclick="w3_close()" class="w3-bar-item w3-button">IMAGES</a>
-    <a href="./watch.html" onclick="w3_close()" class="w3-bar-item w3-button">WATCH</a>
+      <a href="./about.html" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+      <a href="./read.html" onclick="w3_close()" class="w3-bar-item w3-button">READ</a>
+      <a href="./explore.html" onclick="w3_close()" class="w3-bar-item w3-button">EXPLORE</a>
+      <a href="./images.html" onclick="w3_close()" class="w3-bar-item w3-button">IMAGES</a>
+      <a href="./watch.html" onclick="w3_close()" class="w3-bar-item w3-button">WATCH</a>
   </nav>
   <!-- !PAGE CONTENT! -->
   <div class="w3-main" style="margin-left:300px">
@@ -206,7 +210,6 @@
           >TTY: 1-800-987-6543</a
         >
       </div>
-    </div>
     </footer>
     <script>
       // mobile version begin

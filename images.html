@@ -103,39 +103,53 @@
       <h1>
         <a
           href="./index.html"
-          class="w3-bar-item w3-button w3-text-yellow"
+          class="w3-bar-item w3-button w3-text-yellow w3-hover-white"
           style="
-            font-size: 60px;
+            font-size: 50px;
             text-align: center;
             text-shadow: 5px 5px 0 #ff0b50;
           "
-          >SPIRALING</a
-        >
+          >SPIRALING
+        </a>
       </h1>
       <!-- left-sided navbar links, hide on small screens -->
-      <h1 div class="w3-hide-small">
-        <a href="./about.html" class="w3-bar-item w3-button">ABOUT</a>
-        <a href="./read.html" class="w3-bar-item w3-button">READ</a>
-        <a href="./explore.html" class="w3-bar-item w3-button">EXPLORE</a>
-        <a href="./images.html" class="w3-bar-item w3-button">IMAGES</a>
-        <a href="./watch.html" class="w3-bar-item w3-button">WATCH</a>
-      </h1>
+      <div class=".hide-on-desktop">
+        <a href="./about.html" class="w3-bar-item w3-button w3-hover-white"
+          ><h1>ABOUT</h1></a
+        >
+        <a href="./read.html" class="w3-bar-item w3-button w3-hover-white"
+          ><h1>READ</h1></a
+        >
+        <a href="./explore.html" class="w3-bar-item w3-button w3-hover-white"
+          ><h1>EXPLORE</h1></a
+        >
+        <a href="./images.html" class="w3-bar-item w3-button w3-hover-white"
+          ><h1>IMAGES</h1></a
+        >
+        <a href="./watch.html" class="w3-bar-item w3-button w3-hover-white"
+          ><h1>WATCH</h1></a
+        >
+      </div>
     </div>
     <!-- Top menu on small screens -->
-    <div class="w3-container w3-dark-brown w3-top w3-hide-large">
-      <h1
-        class="w3-bar-item w3-button w3-text-yellow w3-hover-brown"
-        style="
-          font-size: 30px;
-          text-align: center;
-          text-shadow: 5px 5px 0 #ff0b50;
-        "
-      >
-        SPIRALING
+    <div class="w3-flex w3-dark-brown w3-top w3-hide-large">
+      <h1>
+        <a
+          href="/index.html"
+          class="w3-text-yellow w3-hover-white"
+          style="
+            font-size: 30px;
+            text-align: center;
+            margin-left: 20px;
+            text-shadow: 5px 5px 0 #ff0b50;
+          "
+          >SPIRALING
+        </a>
       </h1>
       <a
         href="javascript:void(0)"
-        class="w3-bar-item w3-button w3-text-yellow w3-hide-large w3-hide-medium"
+        class="w3-bar-item w3-button w3-text-yellow w3-hide-large w3-hover-white"
+        style="align-content: center"
         onclick="w3_open()"
       >
         <i class="fa fa-bars w3-text-yellow w3-xlarge"></i>
@@ -143,39 +157,42 @@
     </div>
     <!-- navbar mobile version -->
     <nav
-      class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-hide-medium w3-hide-large w3-text-yellow w3-large"
+      class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-hide-large w3-text-yellow .hide-on-mobile"
       style="display: none"
       id="mySidebar"
     >
       <a
         href="javascript:void(0)"
         onclick="w3_close()"
-        class="w3-bar-item w3-button w3-large w3-padding-16"
-      >
-        Close &times;</a
-      >
-      <a href="/about.html" onclick="w3_close()" class="w3-bar-item w3-button"
+        class="w3-bar-item w3-button w3-large w3-padding-16 w3-text-yellow"
+        >Close X
+      </a>
+      <!-- step 7: change mobile menu option text, font size and id reference -->
+      <a href="./about.html" onclick="w3_close()" class="w3-bar-item w3-button"
         >ABOUT</a
       >
-      <a href="/read.html" onclick="w3_close()" class="w3-bar-item w3-button"
+      <a href="./read.html" onclick="w3_close()" class="w3-bar-item w3-button"
         >READ</a
       >
-      <a href="/explore.html" onclick="w3_close()" class="w3-bar-item w3-button"
+      <a
+        href="./explore.html"
+        onclick="w3_close()"
+        class="w3-bar-item w3-button"
         >EXPLORE</a
       >
-      <a href="/images.html" onclick="w3_close()" class="w3-bar-item w3-button"
+      <a href="./images.html" onclick="w3_close()" class="w3-bar-item w3-button"
         >IMAGES</a
       >
-      <a href="/watch.html" onclick="w3_close()" class="w3-bar-item w3-button"
+      <a href="./watch.html" onclick="w3_close()" class="w3-bar-item w3-button"
         >WATCH</a
       >
     </nav>
-    <div class="w3-main" style="margin-left: 300px; margin-right: 50px">
+    <div class="w3-main" style="margin-left: 300px">
       <!-- ART content -->
       <div class="w3-container w3-padding-64" id="images">
         <div class="w3-row-padding" style="margin: 30px">
-          <h6 class="w3-padding large">IMAGES</h6>
-          <div class="w3-col s12 l4" style="width:300px;height:300px">
+          <h6>IMAGES</h6>
+          <div class="w3-col l4 s12 w3-padding-16">
             <img
               src="/new/create 1.png"
               style="width: 100%; cursor: zoom-in"
@@ -183,7 +200,7 @@
               class="w3-hover-shadow"
             />
           </div>
-          <div class="w3-col s12 l4">
+          <div class="w3-col l4 s12 w3-padding-16">
             <img
               src="/new/create 2.png"
               style="width: 100%; cursor: zoom-in"
@@ -191,7 +208,7 @@
               class="w3-hover-shadow"
             />
           </div>
-          <div class="w3-col s12 l4">
+          <div class="w3-col l4 s12 w3-padding-16">
             <img
               src="/new/create 3.png"
               style="width: 100%; cursor: zoom-in"
@@ -200,204 +217,249 @@
             />
           </div>
         </div>
-          <div class="w3-row-padding" style="margin: 30px">
-            <div class="w3-col s12 l4" style="width:300px;height:300px">
-              <img
-                src="/new/create 4.png"
-                style="width: 100%; cursor: zoom-in"
-                onclick="document.getElementById('modal04').style.display='block'"
-                class="w3-hover-shadow"
-              />
-            </div>
-            <div class="w3-col s12 l4">
-              <img
-                src="/new/create 5.png"
-                style="width: 100%; cursor: zoom-in"
-                onclick="document.getElementById('modal05').style.display='block'"
-                class="w3-hover-shadow"
-              />
-            </div>
-            <div class="w3-col s12 l4">
-              <img
-                src="/new/create 6.png"
-                style="width: 100%; cursor: zoom-in"
-                onclick="document.getElementById('modal06').style.display='block'"
-                class="w3-hover-shadow"
-              />
-            </div>
+        <div class="w3-row-padding" style="margin: 30px">
+          <div class="w3-col l4 s12 w3-padding-16">
+            <img
+              src="/new/create 4.png"
+              style="width: 100%; cursor: zoom-in"
+              onclick="document.getElementById('modal04').style.display='block'"
+              class="w3-hover-shadow"
+            />
           </div>
-          <div
-            id="modal01"
-            class="w3-modal"
-            onclick="this.style.display='none'"
-          >
-            <span
-              class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright"
-              style="cursor: pointer"
-              >&times;</span
-            >
-            <div class="w3-modal-content w3-animate-zoom">
-              <h4 class="w3-center">COLLECT -> EXPRESS</h4>
-              <img src="/new/create 1.png" style="width: 100%" />
-            </div>
+          <div class="w3-col l4 s12 w3-padding-16">
+            <img
+              src="/new/create 5.png"
+              style="width: 100%; cursor: zoom-in"
+              onclick="document.getElementById('modal05').style.display='block'"
+              class="w3-hover-shadow"
+            />
           </div>
-          <div
-            id="modal02"
-            class="w3-modal"
-            onclick="this.style.display='none'"
-          >
-            <span
-              class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright"
-              style="cursor: pointer"
-              >&times;</span
-            >
-            <div class="w3-modal-content w3-animate-zoom">
-              <h4 class="w3-center">GET UP</h4>
-              <img src="/new/create 2.png" style="width: 100%" />
-            </div>
+          <div class="w3-col l4 s12 w3-padding-16">
+            <img
+              src="/new/create 6.png"
+              style="width: 100%; cursor: zoom-in"
+              onclick="document.getElementById('modal06').style.display='block'"
+              class="w3-hover-shadow"
+            />
           </div>
-          <div
-            id="modal03"
-            class="w3-modal"
-            onclick="this.style.display='none'"
-          >
-            <span
-              class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright"
-              style="cursor: pointer"
-              >&times;</span
-            >
-            <div class="w3-modal-content w3-animate-zoom">
-              <h4 class="w3-center">SOURCE -> EARTH</h4>
-              <img src="/new/create 3.png" style="width: 100%" />
-            </div>
+        </div>
+        <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+          <span
+            class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright"
+            style="cursor: pointer"
+            >&times;
+          </span>
+          <div class="w3-modal-content w3-animate-zoom">
+            <h4 class="w3-center">COLLECT -> EXPRESS</h4>
+            <img src="/new/create 1.png" style="width: 100%" />
           </div>
-          <div
-            id="modal04"
-            class="w3-modal"
-            onclick="this.style.display='none'"
-          >
-            <span
-              class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright"
-              style="cursor: pointer"
-              >&times;</span
-            >
-            <div class="w3-modal-content w3-animate-zoom">
-              <h4 class="w3-center">CHUCK KLOSTERMAN</h4>
-              <img src="/new/create 4.png" style="width: 100%" />
-            </div>
+        </div>
+        <div id="modal02" class="w3-modal" onclick="this.style.display='none'">
+          <span
+            class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright"
+            style="cursor: pointer"
+            >&times;
+          </span>
+          <div class="w3-modal-content w3-animate-zoom">
+            <h4 class="w3-center">GET UP</h4>
+            <img src="/new/create 2.png" style="width: 100%" />
           </div>
-          <div
-            id="modal05"
-            class="w3-modal"
-            onclick="this.style.display='none'"
-          >
-            <span
-              class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright"
-              style="cursor: pointer"
-              >&times;</span
-            >
-            <div class="w3-modal-content w3-animate-zoom">
-              <h4 class="w3-center">CREATION</h4>
-              <img src="/new/create 5.png" style="width: 100%" />
-            </div>
+        </div>
+        <div id="modal03" class="w3-modal" onclick="this.style.display='none'">
+          <span
+            class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright"
+            style="cursor: pointer"
+            >&times;
+          </span>
+          <div class="w3-modal-content w3-animate-zoom">
+            <h4 class="w3-center">SOURCE -> EARTH</h4>
+            <img src="/new/create 3.png" style="width: 100%" />
           </div>
-          <div
-            id="modal06"
-            class="w3-modal"
-            onclick="this.style.display='none'"
-          >
-            <span
-              class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright"
-              style="cursor: pointer"
-              >&times;</span
-            >
-            <div class="w3-modal-content w3-animate-zoom">
-              <h4 class="w3-center">FLOW STATE</h4>
-              <img src="/new/create 6.png" style="width: 100%" />
-            </div>
+        </div>
+        <div id="modal04" class="w3-modal" onclick="this.style.display='none'">
+          <span
+            class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright"
+            style="cursor: pointer"
+            >&times;
+          </span>
+          <div class="w3-modal-content w3-animate-zoom">
+            <h4 class="w3-center">CHUCK KLOSTERMAN</h4>
+            <img src="/new/create 4.png" style="width: 100%" />
+          </div>
+        </div>
+        <div id="modal05" class="w3-modal" onclick="this.style.display='none'">
+          <span
+            class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright"
+            style="cursor: pointer"
+            >&times;
+          </span>
+          <div class="w3-modal-content w3-animate-zoom">
+            <h4 class="w3-center">CREATION</h4>
+            <img src="/new/create 5.png" style="width: 100%" />
+          </div>
+        </div>
+        <div id="modal06" class="w3-modal" onclick="this.style.display='none'">
+          <span
+            class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright"
+            style="cursor: pointer"
+            >&times;
+          </span>
+          <div class="w3-modal-content w3-animate-zoom">
+            <h4 class="w3-center">FLOW STATE</h4>
+            <img src="/new/create 6.png" style="width: 100%" />
           </div>
         </div>
       </div>
-      <!-- End page content -->
-    </div>
-
-    <!-- Footer -->
-    <footer
-      class="w3-content w3-center w3-pink w3-padding-32"
-      style="max-width: 100%"
-    >
-      <a href="#home" class="w3-button w3-pink"
-        ><i class="fa fa-arrow-up w3-margin-right"></i>TO THE TOP</a
+      <!-- Footer -->
+      <footer
+        class="w3-content w3-center w3-pink w3-padding-32"
+        style="max-width: 100%"
       >
-      <div class="w3-large w3-section">
-        <a
-          class="fa fa-twitter w3-hover-opacity w3-text-white"
-          href="https://twitter.com/"
-          target="_blank"
-        ></a>
-        <a
-          class="fa fa-instagram w3-hover-opacity w3-text-white"
-          href="https://www.instagram.com/"
-          target="_blank"
-        ></a>
-        <a
-          class="fa fa-linkedin w3-hover-opacity w3-text-white"
-          href="https://www.linkedin.com/"
-          target="_blank"
-        ></a>
-        <a
-          class="fa fa-pinterest-p w3-hover-opacity w3-text-white"
-          href="https://www.pinterest.com/"
-          target="_blank"
-        ></a>
-        <a
-          class="fa fa-facebook-official w3-hover-opacity w3-text-white my-text-decoration"
-          href="https://www.facebook.com/"
-          target="_blank"
-        ></a>
-      </div>
-      <div>
-        <a
-          href="#home"
-          target="_blank"
-          class="w3-hover-opacity w3-text-white"
-          style="padding-right: 20px"
-          >Privacy Policy</a
+        <a href="#home" class="w3-button w3-pink"
+          ><i class="fa fa-arrow-up w3-margin-right"></i>TO THE TOP</a
         >
-        <a
-          href="#home"
-          target="_blank"
-          class="w3-hover-opacity w3-text-white"
-          style="padding-right: 20px"
-          >Terms of User</a
-        >
-        <a href="#home" target="_blank" class="w3-hover-opacity w3-text-white"
-          >Accessibility</a
-        >
-      </div>
-      <div>
-        <a
-          href="#home"
-          target="_blank"
-          class="w3-hover-opacity w3-text-white"
-          style="padding-right: 20px"
-          >1-800-123-4567</a
-        >
-        <a
-          href="#home"
-          target="_blank"
-          class="w3-hover-opacity w3-text-white"
-          style="padding-right: 20px"
-          >TTY: 1-800-987-6543</a
-        >
-        <a
-          href="#"
-          target="_blank"
-          class="w3-hover-opacity w3-text-white fa fa-copyright Roboto"
-        >
-          All Rights Reserved.</a
-        >
-      </div>
-    </footer>
+        <div class="w3-large w3-section">
+          <a
+            class="fa fa-twitter w3-hover-opacity w3-text-white"
+            href="https://twitter.com/"
+            target="_blank"
+          ></a>
+          <a
+            class="fa fa-instagram w3-hover-opacity w3-text-white"
+            href="https://www.instagram.com/"
+            target="_blank"
+          ></a>
+          <a
+            class="fa fa-linkedin w3-hover-opacity w3-text-white"
+            href="https://www.linkedin.com/"
+            target="_blank"
+          ></a>
+          <a
+            class="fa fa-pinterest-p w3-hover-opacity w3-text-white"
+            href="https://www.pinterest.com/"
+            target="_blank"
+          ></a>
+          <a
+            class="fa fa-facebook-official w3-hover-opacity w3-text-white my-text-decoration"
+            href="https://www.facebook.com/"
+            target="_blank"
+          ></a>
+        </div>
+        <div>
+          <a
+            href="#home"
+            target="_blank"
+            class="w3-hover-opacity w3-text-white"
+            style="padding-right: 20px"
+            >Privacy Policy</a
+          >
+          <a
+            href="#home"
+            target="_blank"
+            class="w3-hover-opacity w3-text-white"
+            style="padding-right: 20px"
+            >Terms of User</a
+          >
+          <a href="#home" target="_blank" class="w3-hover-opacity w3-text-white"
+            >Accessibility</a
+          >
+        </div>
+        <div>
+          <a
+            href="#home"
+            target="_blank"
+            class="w3-hover-opacity w3-text-white"
+            style="padding-right: 20px"
+            >1-800-123-4567</a
+          >
+          <a
+            href="#home"
+            target="_blank"
+            class="w3-hover-opacity w3-text-white"
+            style="padding-right: 20px"
+            >TTY: 1-800-987-6543</a
+          >
+        </div>
+      </footer>
+      <script>
+        // mobile version begin
+        // Toggle between showing and hiding the sidebar when clicking the menu icon
+        var mySidebar = document.getElementById("mySidebar");
+
+        function w3_open() {
+          if (mySidebar.style.display === "block") {
+            mySidebar.style.display = "none";
+          } else {
+            mySidebar.style.display = "block";
+          }
+        }
+
+        // Close the sidebar with the close button
+        function w3_close() {
+          mySidebar.style.display = "none";
+        }
+        // mobile version end
+
+        // carousel slideshow begin
+        var myIndex = 0;
+        carousel();
+        function carousel() {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+          myIndex++;
+          if (myIndex > x.length) {
+            myIndex = 1;
+          }
+          x[myIndex - 1].style.display = "block";
+          setTimeout(carousel, 2000); // Change image every 2 seconds
+        }
+
+        // slideshow - carousel
+        // hook each carousel button
+        function currentDiv(n) {
+          showDivs((slideIndex = n));
+          myIndex = n;
+        }
+
+        function showDivs(n) {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("demo");
+          if (n > x.length) {
+            slideIndex = 1;
+          }
+          if (n < 1) {
+            slideIndex = x.length;
+          }
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(
+              " w3-opacity-off",
+              ""
+            );
+          }
+          x[slideIndex - 1].style.display = "block";
+          dots[slideIndex - 1].className += " w3-opacity-off";
+        }
+        // carousel slideshow end
+
+        // sortable table begin
+        $(document).ready(function () {
+          $("table#myTable").tablesorter({
+            sortList: [
+              [2, 1],
+            ] /* 1st number - column to sort, 2nd number - asending (2) or descending order (1) */,
+            CssAsc: "tablesorter-headerAsc",
+            CssDesc: "tablesorter-headerDesc",
+          });
+        });
+        // sortable table end
+      </script>
+    </div>
   </body>
 </html>

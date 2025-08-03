@@ -13,15 +13,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jersey+25&family=Roboto+Mono:ital@0;1&display=swap" rel="stylesheet">
-    <script
+  <script
       type="text/JavaScript"
       src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
-    </script>
-    <script
+  </script>
+  <script
       type="text/JavaScript"
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js">
-    </script>
-    <style>
+  </script>
+  <style>
       body {
         font-family: "Roboto Mono";
         font-weight: 400;
@@ -76,6 +76,12 @@
       .mySlides {
         max-width: 65%;
       }
+
+      /* pam: added example to change button hover */
+      .hover-color-1:hover {
+        color: green !important;
+        background-color: yellow !important;
+      }
     </style>
   </head>
   <body class="w3-dark-brown w3-content" style="max-width:100%">
@@ -83,155 +89,72 @@
     <div class="w3-sidebar w3-bar-block w3-dark-brown w3-animate-left w3-text-yellow w3-collapse w3-top w3-center" 
       style="z-index:3;width:300px" id="mySidebar">
     <!-- shopping cart and search icons -->
-    <div class="w3-padding-32 w3-hide-small w3-text-yellow w3-center">
-      <i class="fa fa-shopping-basket w3-xlarge"></i>
-      <i class="fa fa-search w3-xlarge"></i>
-    </div>
+      <div class="w3-padding-32 w3-hide-small w3-text-yellow w3-center">
+          <i class="fa fa-shopping-basket w3-xlarge"></i>
+          <i class="fa fa-search w3-xlarge"></i>
+      </div>
     <!-- Home -->
-    <h1>
-      <a href="./index.html" 
+      <h1><a href="./index.html" 
         class="w3-bar-item w3-button w3-text-yellow w3-hover-white" 
-        style="font-size:50px;text-align:center;text-shadow:5px 5px 0 #ff0b50">SPIRALING
-      </a>
-    </h1>
+        style="font-size:50px;text-align:center;text-shadow:5px 5px 0 #ff0b50">SPIRALING</a>
+      </h1>
     <!-- left-sided navbar links, hide on small screens -->
-    <div class=".hide-on-desktop">
-      <a href="./about.html" class="w3-bar-item w3-button w3-hover-white"><h1>ABOUT</h1></a> 
-      <a href="./read.html" class="w3-bar-item w3-button w3-hover-white"><h1>READ</h1></a> 
-      <a href="./explore.html" class="w3-bar-item w3-button w3-hover-white"><h1>EXPLORE</h1></a>
-      <a href="./images.html" class="w3-bar-item w3-button w3-hover-white"><h1>IMAGES</h1></a>
-      <a href="./watch.html" class="w3-bar-item w3-button w3-hover-white"><h1>WATCH</h1></a>
+      <!-- pam: editted -->
+      <div class=".hide-on-desktop"></div>
+        <!-- pam: added example to change button hover -->
+        <a href="./about.html" class="w3-bar-item w3-button w3-hover-white"><h1>ABOUT</h1></a> 
+        <a href="./read.html" class="w3-bar-item w3-button w3-hover-white"><h1>READ</h1></a> 
+        <a href="./explore.html" class="w3-bar-item w3-button w3-hover-white"><h1>EXPLORE</h1></a>
+        <a href="./images.html" class="w3-bar-item w3-button w3-hover-white"><h1>IMAGES</h1></a>
+        <a href="./watch.html" class="w3-bar-item w3-button w3-hover-white"><h1>WATCH</h1></a>
+      </div>
     </div>
-  </div>
     <!-- Top menu on small screens -->
-  <div class="w3-flex w3-dark-brown w3-top w3-hide-large">
-    <h1>
-      <a href="/index.html" class="w3-text-yellow w3-hover-white" 
-        style="font-size:30px;text-align:center;margin-left:20px;text-shadow:5px 5px 0 #ff0b50">SPIRALING
-      </a>
-    </h1>
+    <div class="w3-flex w3-dark-brown w3-top w3-hide-large">
+      <h1>
+        <a href="/index.html" class="w3-bar-item w3-button w3-text-yellow w3-hover-white" 
+        style="font-size:30px;text-align:center;margin-left:20px;text-shadow:5px 5px 0 #ff0b50">SPIRALING</a>
+      </h1>
       <a href="javascript:void(0)" 
         class="w3-bar-item w3-button w3-text-yellow w3-hide-large w3-hover-white"
         style="align-content:center" 
         onclick="w3_open()">
         <i class="fa fa-bars w3-text-yellow w3-xlarge"></i>
       </a>
+    </div>
   </div>
   <!-- navbar mobile version -->
   <nav
-      class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-hide-large w3-text-yellow .hide-on-mobile"
+      class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-hide-large w3-text-yellow w3-large .hide-on-mobile"
       style="display:none"
       id="mySidebar">
-      <a href="javascript:void(0)"
-        onclick="w3_close()"
-        class="w3-bar-item w3-button w3-large w3-padding-16 w3-text-yellow">Close X
-      </a>
+    <a href="javascript:void(0)"
+      class="w3-bar-item w3-button w3-large w3-padding-16"
+      onclick="w3_close()">
+      CLOSE &times;
+    </a>
   <!-- step 7: change mobile menu option text, font size and id reference --> 
-      <a href="./about.html" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-      <a href="./read.html" onclick="w3_close()" class="w3-bar-item w3-button">READ</a>
-      <a href="./explore.html" onclick="w3_close()" class="w3-bar-item w3-button">EXPLORE</a>
-      <a href="./images.html" onclick="w3_close()" class="w3-bar-item w3-button">IMAGES</a>
-      <a href="./watch.html" onclick="w3_close()" class="w3-bar-item w3-button">WATCH</a>
+    <a href="./about.html" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+    <a href="./read.html" onclick="w3_close()" class="w3-bar-item w3-button">READ</a>
+    <a href="./explore.html" onclick="w3_close()" class="w3-bar-item w3-button">EXPLORE</a>
+    <a href="./images.html" onclick="w3_close()" class="w3-bar-item w3-button">IMAGES</a>
+    <a href="./watch.html" onclick="w3_close()" class="w3-bar-item w3-button">WATCH</a>
   </nav>
-  <div class="w3-main" style="margin-left:300px;margin-right:50px">
-  <!-- READ Section -->
-    <div class="w3-padding-64" id="read">
-      <h6 class="w3-padding-large" style="margin-left:30px">READ</h6>
-      <div class="w3-flex" style="flex-direction:row;justify-content:center;margin-left:50px">
-        <img 
-          class="mySlides" 
-          src="/new/selling.png" 
-          style="width:1000px; height:600px; object-fit:cover" 
-        />
-        <img
-          class="mySlides"
-          src="/new/website.png"
-          style="width:1000px; height:600px; object-fit:cover; display: none"
-        />
-        <img
-          class="mySlides"
-          src="/new/what you need.png"
-          style="width:1000px; height:600px; object-fit:cover; display: none"
-        />
-        <div class="w3-flex w3-hide-small w3-hide-medium"
-          style="flex-direction:column;align-items:right">
-          <img
-            class="demo w3-opacity w3-hover-opacity-off"
-            src="/new/selling.png"
-            style="width:200px; height: 200px; object-fit:cover; cursor: pointer; padding: 20px"
-            onclick="currentDiv(1)"
-          />
-         <img
-            class="demo w3-opacity w3-hover-opacity-off"
-            src="/new/website.png"
-            style="width:200px; height: 200px; object-fit:cover; cursor: pointer; padding: 20px"
-            onclick="currentDiv(2)"
-          />
-          <img
-            class="demo w3-opacity w3-hover-opacity-off"
-            src="/new/what you need.png"
-            style="width:200px; height: 200px; object-fit:cover; cursor: pointer; padding: 20px"
-            onclick="currentDiv(3)"
-          />
-        </div>
-      </div>
-      <div class="w3-row">
-        <div class="w3-col m4 w3-dark-brown">
-          <div class="w3-text-yellow w3-center">
-            <h1 style="font-size:20px">SELLING YOUR WORK</h1>
-          </div>
-          <div class="my-scrolling" style="padding-left: 20px;padding-right: 10px">
-            <p> It should be said in the first line of this guide
-                that selling art is not easy. Whether through a 
-                gallery, through an online platform, 
-                or out of your own studio, making a sale of 
-                your own work will be challenging—
-                but it can also be exciting.</br>
-                <a href="https://thecreativeindependent.com/guides/how-to-sell-your-own-artwork/">Link to guide</a>
-            </p>
-          </div>
-        </div>
-        <div class="w3-col m4 w3-dark-brown">
-          <div class="w3-text-yellow w3-center">
-            <h1 style="font-size:20px">WEBSITE'S PURPOSE</h1>
-          </div>
-          <div class="my-scrolling" style="padding-left: 20px;padding-right: 10px">
-            <p>
-              My favorite aspect of websites is their duality: 
-              they’re both subject and object at once. 
-              In other words, a website creator becomes both author 
-              and architect simultaneously. 
-              There are endless possibilities as to what a website could be. 
-              What kind of room is a website? 
-              Or is a website more like a house? A boat? A cloud? 
-              A garden? A puddle? Whatever it is, there’s potential for a 
-              self-reflexive feedback loop: when you put energy into a website, 
-              in turn the website helps form your own identity.</br>
-              <a href="https://thecreativeindependent.com/essays/laurel-schwulst-my-website-is-a-shifting-house-next-to-a-river-of-knowledge-what-could-yours-be/">Link to guide</a>
-            </p>
-          </div>
-        </div>
-        <div class="w3-col m4 w3-dark-brown">
-          <div class="w3-text-yellow w3-center">
-            <h1 style="font-size:20px">ASK FOR WHAT YOU NEED</h1>
-          </div>
-          <div class="my-scrolling" style="padding-left: 20px;padding-right: 10px">
-            <p>
-              Learning how to ask for emotional and financial support 
-              for your art is a crucial skill to build as you work to 
-              develop a sustainable creative practice. 
-              We at The Void Academy know that asking for what you need 
-              can be daunting, so we’ve put together this guide to help you 
-              overcome this common fear with confidence and grace.</br>
-              <a href="https://thecreativeindependent.com/guides/how-to-ask-for-what-you-need/">Link to guide</a>
-            </p>
-          </div>
-        </div>
-      </div>
+  <!-- !PAGE CONTENT! -->
+  <div class="w3-main" style="margin-left:300px">
+  <!-- Push down content on small screens --> 
+    <div class="w3-row">
+      <img
+      class="w3-image"
+      src="/new/cover.png"
+      alt="Spiral"
+      width="100%"/>
     </div>
+    <!-- Footer -->
     <footer class="w3-content w3-center w3-pink w3-padding-32" style="max-width:100%">
-      <a href="#home" class="w3-button w3-pink">
-        <i class="fa fa-arrow-up w3-margin-right"></i>TO THE TOP</a>
+      <a href="#home" class="w3-button w3-pink"
+        ><i class="fa fa-arrow-up w3-margin-right"></i>TO THE TOP</a
+      >
       <div class="w3-large w3-section">
         <a
           class="fa fa-twitter w3-hover-opacity w3-text-white"
@@ -294,7 +217,11 @@
           >TTY: 1-800-987-6543</a
         >
       </div>
+    <!-- pam editted -->
+    <!-- </div> -->
     </footer>
+    <!-- pam editted -->
+    </div>
     <script>
       // mobile version begin
       // Toggle between showing and hiding the sidebar when clicking the menu icon
@@ -371,7 +298,5 @@
       });
       // sortable table end
     </script>
-  </div>
-</body>
+  </body>
 </html>
-          
