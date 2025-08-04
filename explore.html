@@ -52,7 +52,7 @@
       }
       a {
         text-decoration: none;
-        color: #e0ff44;
+        color: #ff448f;
         cursor: pointer;
       }
       .my-img-size-1 {
@@ -187,9 +187,9 @@
         >WATCH</a
       >
     </nav>
-    <div class="w3-main" style="margin-left: 300px">
+    <div class="w3-main" style="margin-left: 300px; position: static">
       <!-- EXPLORE Section -->
-      <div class="w3-row w3-padding-64" id="explore">
+      <div class="w3-container w3-padding-64" id="explore">
         <div class="w3-padding-large">
           <h6>EXPLORE</h6>
           <table id="myTable" class="w3-table-all w3-text-brown">
@@ -328,55 +328,6 @@
           mySidebar.style.display = "none";
         }
         // mobile version end
-
-        // carousel slideshow begin
-        var myIndex = 0;
-        carousel();
-        function carousel() {
-          var i;
-          var x = document.getElementsByClassName("mySlides");
-          for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-          }
-          myIndex++;
-          if (myIndex > x.length) {
-            myIndex = 1;
-          }
-          x[myIndex - 1].style.display = "block";
-          setTimeout(carousel, 2000); // Change image every 2 seconds
-        }
-
-        // slideshow - carousel
-        // hook each carousel button
-        function currentDiv(n) {
-          showDivs((slideIndex = n));
-          myIndex = n;
-        }
-
-        function showDivs(n) {
-          var i;
-          var x = document.getElementsByClassName("mySlides");
-          var dots = document.getElementsByClassName("demo");
-          if (n > x.length) {
-            slideIndex = 1;
-          }
-          if (n < 1) {
-            slideIndex = x.length;
-          }
-          for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-          }
-          for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(
-              " w3-opacity-off",
-              ""
-            );
-          }
-          x[slideIndex - 1].style.display = "block";
-          dots[slideIndex - 1].className += " w3-opacity-off";
-        }
-        // carousel slideshow end
-
         // sortable table begin
         $(document).ready(function () {
           $("table#myTable").tablesorter({
